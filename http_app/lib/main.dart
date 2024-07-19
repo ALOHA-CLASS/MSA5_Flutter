@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -22,11 +23,11 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/main',
       routes: {
-        '/main' : (context) => MainScreen(),
-        '/board/list' : (context) => ListScreen(),
-        '/board/read' : (context) => ReadScreen(),
-        '/board/insert' : (context) => InsertScreen(),
-        '/board/update' : (context) => UpdateScreen(),
+        '/main' : (context) => const MainScreen(),
+        '/board/list' : (context) => const ListScreen(),
+        '/board/read' : (context) => const ReadScreen(),
+        '/board/insert' : (context) => const InsertScreen(),
+        '/board/update' : (context) => const UpdateScreen(),
       },
     );
   }
